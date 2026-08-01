@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wilkes-Barre Weekend — Aug 1–2, 2026</title>
+<meta property="og:title" content="Wilkes-Barre Weekend Finder — Aug 1–2">
+<meta property="og:description" content="Verified local events and open attractions around 18704, today and tomorrow, on one map.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://a799608.github.io/wb-weekend/">
+<meta property="og:image" content="https://a799608.github.io/wb-weekend/og-cover.jpg?s=1">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://a799608.github.io/wb-weekend/og-cover.jpg?s=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  html, body { height: 100%; margin: 0; font-family: "Segoe UI", system-ui, sans-serif; }
+  #map { height: 100%; }
+  .panel {
+    background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    padding: 10px 12px; font-size: 12.5px; max-width: 340px; max-height: 82vh; overflow-y: auto;
+  }
+  .panel h3 { margin: 0 0 6px; font-size: 15px; }
+  .panel h4 { margin: 8px 0 4px; font-size: 13px; border-bottom: 1px solid #eee; padding-bottom: 2px; }
+  .show { border-top: 1px solid #f0f0f0; padding: 4px 0; }
+  .htl-book { background: #1e8a3c; color: #fff; text-decoration: none; border-radius: 4px; padding: 3px 8px; font-weight: 600; display: inline-block; margin-top: 3px; }
+  .leaflet-popup-content { font-size: 12.5px; }
+  .muted { color: #777; font-size: 11px; }
+  .wx { font-size: 12px; background: #eef4fb; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
+  .chip { display: inline-block; margin: 2px 3px 2px 0; }
+  @media (max-width: 700px) {
+    .mpanel { display: none !important; }
+    .mpanel.mopen {
+      display: block !important; position: fixed !important;
+      left: 8px; right: 8px; bottom: 56px; top: auto !important;
+      max-height: 62vh; overflow-y: auto; z-index: 10000;
+      max-width: none !important; width: auto !important; margin: 0 !important;
+    }
+    .mtabbar {
+      position: fixed; bottom: 0; left: 0; right: 0; display: flex; z-index: 10001;
+      background: #fff; border-top: 1px solid #ccc; box-shadow: 0 -2px 8px rgba(0,0,0,.15);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .mtab { flex: 1; padding: 12px 2px; font-size: 13px; border: none; background: #fff; font-weight: 700; color: #333; }
+    .mtab.mact { background: #1e8a3c; color: #fff; }
+    .panel label { display: inline-block; padding: 3px 0; }
+    .leaflet-control-attribution { font-size: 9px; }
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  var HOME = [41.279, -75.897];   // 18704 Kingston
+  var map = L.map('map').setView(HOME, 11);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  L.marker(HOME, { icon: L.divIcon({ className: '', html: '<div style="font-size:24px;line-height:24px;filter:drop-shadow(0 1px 2px #0008)">🏠</div>', iconSize: [24,24], iconAnchor: [12,12] }) })
+    .addTo(map).bindTooltip('Home — 18704', { direction: 'right', offset: [10,0] });
+
+  var CAT_ICON = { music: '🎸', festival: '🎪', sports: '⚾', family: '🎠', market: '🧺', film: '🎬', outdoor: '🥾', museum: '🏛', other: '📍' };
+  var state = { day: 'sat', cats: {} };
+  Object.keys(CAT_ICON).forEach(function (c) { state.cats[c] = true; });
+  var events = { sat: [], sun: [] }, attractions = [], weather = null;
+  var layer = L.layerGroup().addTo(map);
+  var hidden = {};
+  try { hidden = JSON.parse(localStorage.getItem('wbHidden') || '{}'); } catch (e) {}
+
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function idOf(x) { return (x.name || '') + '|' + (x.venue || x.address || ''); }
+  window._hide = function (id) { hidden[id] = true; localStorage.setItem('wbHidden', JSON.stringify(hidden)); map.closePopup(); render(); };
+  window._resetHidden = function () { hidden = {}; localStorage.setItem('wbHidden', '{}'); render(); };
+
+  function popup(x, isEvent) {
+    var h = '<b>' + esc(x.name) + '</b><br>';
+    if (isEvent) h += (x.venue ? esc(x.venue) + '<br>' : '') + '<b>' + esc(x.time || '') + '</b> &middot; ' + esc(x.price || 'free/see site') + '<br>';
+    else h += '<b>Today:</b> ' + esc(state.day === 'sat' ? (x.open_sat || '?') : (x.open_sun || '?')) + ' &middot; ' + esc(x.price || '') + '<br>';
+    h += '<span class="muted">' + esc(x.address || '') + '</span><br>';
+    if (x.note) h += esc(x.note) + '<br>';
+    if (x.weather_dependent) h += '<span class="muted">⛅ weather-dependent</span><br>';
+    h += '<div style="display:flex;gap:5px;margin-top:4px">' +
+      (x.url ? '<a class="htl-book" style="flex:1.2;text-align:center" href="' + esc(x.url) + '" target="_blank" rel="noopener">Site / tickets</a>' : '') +
+      '<a class="htl-book" style="flex:1.2;text-align:center;background:#1565c0" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=18704&destination=' + encodeURIComponent(x.address || x.name) + '&travelmode=driving">Directions</a>' +
+      '<button onclick="_hide(\'' + esc(idOf(x)) + '\')" style="flex:.8;background:#fff;border:1px solid #c33;color:#c33;border-radius:4px;cursor:pointer;font-weight:700">✗</button>' +
+      '</div>';
+    return h;
+  }
+
+  function attractionOpen(x) {
+    var o = state.day === 'sat' ? x.open_sat : x.open_sun;
+    return o && !/closed/i.test(o);
+  }
+
+  function render() {
+    layer.clearLayers();
+    var shown = 0;
+    (events[state.day] || []).forEach(function (x) {
+      if (x.lat == null || !state.cats[x.category || 'other'] || hidden[idOf(x)]) return;
+      shown++;
+      layer.addLayer(L.marker([x.lat, x.lng], { icon: L.divIcon({ className: '', html: '<div style="font-size:19px;line-height:19px;filter:drop-shadow(0 1px 1px #0008)">' + (CAT_ICON[x.category] || '📍') + '</div>', iconSize: [19,19], iconAnchor: [9,9] }) })
+        .bindPopup(popup(x, true), { maxWidth: 300 }));
+    });
+    attractions.forEach(function (x) {
+      if (x.lat == null || !state.cats[x.category || 'other'] || hidden[idOf(x)] || !attractionOpen(x)) return;
+      shown++;
+      layer.addLayer(L.marker([x.lat, x.lng], { icon: L.divIcon({ className: '', html: '<div style="font-size:17px;line-height:17px;opacity:.92;filter:drop-shadow(0 1px 1px #0008)">' + (CAT_ICON[x.category] || '📍') + '</div>', iconSize: [17,17], iconAnchor: [8,8] }) })
+        .bindPopup(popup(x, false), { maxWidth: 300 }));
+    });
+    var el = document.getElementById('count');
+    if (el) {
+      var nH = Object.keys(hidden).length;
+      el.innerHTML = shown + ' options for ' + (state.day === 'sat' ? 'Saturday' : 'Sunday') +
+        (nH ? ' &middot; ' + nH + ' hidden <a href="#" onclick="_resetHidden();return false">reset</a>' : '');
+    }
+    renderList();
+  }
+
+  function renderList() {
+    var el = document.getElementById('list');
+    if (!el) return;
+    var h = '';
+    if (weather) {
+      var w = weather[state.day];
+      if (w) h += '<div class="wx">☀️ <b>' + (state.day === 'sat' ? 'Saturday' : 'Sunday') + ':</b> ' + esc(w.text || '') +
+                  (w.hi != null ? ' High ' + esc(w.hi) + '°' : '') + (w.precip != null ? ' · ' + esc(w.precip) + '% rain' : '') + '</div>';
+    }
+    var evs = (events[state.day] || []).filter(function (x) { return state.cats[x.category || 'other'] && !hidden[idOf(x)]; });
+    h += '<h4>📅 Events</h4>';
+    h += evs.length ? evs.map(function (x) {
+      return '<div class="show"><b>' + (CAT_ICON[x.category] || '') + ' ' + esc(x.name) + '</b><br><span class="muted">' +
+        esc(x.venue || '') + ' · ' + esc(x.time || '') + ' · ' + esc(x.price || 'free/see site') + '</span></div>';
+    }).join('') : '<div class="muted">Loading events… (or none match filters)</div>';
+    var ats = attractions.filter(function (x) { return state.cats[x.category || 'other'] && !hidden[idOf(x)] && attractionOpen(x); });
+    h += '<h4>🗺 Open today</h4>';
+    h += ats.length ? ats.map(function (x) {
+      return '<div class="show"><b>' + (CAT_ICON[x.category] || '') + ' ' + esc(x.name) + '</b><br><span class="muted">' +
+        esc(state.day === 'sat' ? (x.open_sat || '') : (x.open_sun || '')) + (x.price ? ' · ' + esc(x.price) : '') + '</span></div>';
+    }).join('') : '<div class="muted">Loading attractions…</div>';
+    el.innerHTML = h;
+  }
+
+  var ctl = L.control({ position: 'topright' });
+  ctl.onAdd = function () {
+    var d = L.DomUtil.create('div', 'panel');
+    var chips = Object.keys(CAT_ICON).map(function (c) {
+      return '<label class="chip"><input type="checkbox" id="cat-' + c + '" checked> ' + CAT_ICON[c] + ' ' + c + '</label>';
+    }).join('');
+    d.innerHTML = '<h3>WB Weekend<br><span class="muted">Sat Aug 1 · Sun Aug 2 · around 18704</span></h3>' +
+      '<label><input type="radio" name="day" id="day-sat" checked> Today (Sat)</label> ' +
+      '<label><input type="radio" name="day" id="day-sun"> Tomorrow (Sun)</label><br>' +
+      chips + '<div id="count" class="muted"></div>';
+    L.DomEvent.disableClickPropagation(d);
+    return d;
+  };
+  ctl.addTo(map);
+
+  var listCtl = L.control({ position: 'topleft' });
+  listCtl.onAdd = function () {
+    var d = L.DomUtil.create('div', 'panel');
+    d.innerHTML = '<div id="list"><div class="muted">Loading…</div></div>';
+    L.DomEvent.disableClickPropagation(d);
+    return d;
+  };
+  listCtl.addTo(map);
+
+  document.getElementById('day-sat').addEventListener('change', function () { state.day = 'sat'; render(); });
+  document.getElementById('day-sun').addEventListener('change', function () { state.day = 'sun'; render(); });
+  Object.keys(CAT_ICON).forEach(function (c) {
+    document.getElementById('cat-' + c).addEventListener('change', function (e) { state.cats[c] = e.target.checked; render(); });
+  });
+
+  var IS_MOBILE = window.innerWidth <= 700;
+  var _mtabbar = null;
+  function addMobilePanel(el, label) {
+    if (!IS_MOBILE || !el) return;
+    if (!_mtabbar) { _mtabbar = document.createElement('div'); _mtabbar.className = 'mtabbar'; document.body.appendChild(_mtabbar); }
+    el.classList.add('mpanel');
+    var b = document.createElement('button');
+    b.className = 'mtab'; b.textContent = label;
+    b.addEventListener('click', function () {
+      var wasOpen = el.classList.contains('mopen');
+      document.querySelectorAll('.mpanel').forEach(function (p) { p.classList.remove('mopen'); });
+      document.querySelectorAll('.mtab').forEach(function (t) { t.classList.remove('mact'); });
+      if (!wasOpen) { el.classList.add('mopen'); b.classList.add('mact'); }
+    });
+    _mtabbar.appendChild(b);
+  }
+  addMobilePanel(document.getElementById('list').closest('.panel'), '📅 What’s on');
+  addMobilePanel(document.getElementById('count').closest('.panel'), '🎛 Filters');
+
+  function load() {
+    Promise.all([
+      fetch('wb_events.json?t=' + Date.now()).then(function (r) { return r.json(); }).catch(function () { return { sat: [], sun: [] }; }),
+      fetch('wb_attractions.json?t=' + Date.now()).then(function (r) { return r.json(); }).catch(function () { return { weather: null, attractions: [] }; })
+    ]).then(function (res) {
+      events = res[0] || { sat: [], sun: [] };
+      weather = (res[1] || {}).weather || null;
+      attractions = (res[1] || {}).attractions || [];
+      render();
+    });
+  }
+  load();
+  setInterval(load, 120000);   // data streams in — refresh every 2 min
+</script>
+</body>
+</html>

@@ -155,6 +155,71 @@
    "note": "Wavepool, slides, lazy river; daily summer schedule",
    "lat": 41.349566,
    "lng": -75.672042
+  },
+  {
+   "name": "4th Annual Latino Fiesta",
+   "venue": "Nay Aug Park",
+   "address": "500 Arthur Ave, Scranton, PA 18510",
+   "day": "sat",
+   "time": "11:00 AM-6:00 PM",
+   "price": "Not listed (city park festival)",
+   "url": "https://scrantonpa.gov/events/list/",
+   "category": "festival",
+   "note": "Culture, music, nonstop energy - NEPA's Latino Fiesta, per City of Scranton calendar",
+   "lat": null,
+   "lng": null
+  },
+  {
+   "name": "NEPA Philharmonic Sensory-Friendly Brass Concert",
+   "venue": "Lemmond Theater, Misericordia University",
+   "address": "301 Lake St, Dallas, PA 18612",
+   "day": "sat",
+   "time": "1:00 PM (45 min)",
+   "price": "Free",
+   "url": "https://www.wvia.org/news/local/2026-07-30/nepa-philharmonic-to-hold-sensory-friendly-and-lakeside-concerts-in-the-back-mountain-on-saturday-to-celebrate-america250",
+   "category": "family",
+   "note": "America250 brass concert w/ fidgets, sensory headphones, haptic vests; walk-ins welcome",
+   "lat": null,
+   "lng": null
+  },
+  {
+   "name": "NEPA Philharmonic 'Lakeside Brass' on the water",
+   "venue": "Harveys Lake (boat/kayak access)",
+   "address": "Harveys Lake, PA 18618",
+   "day": "sat",
+   "time": "6:00 PM (1 hr)",
+   "price": "Free from your own boat/kayak; $80 guided kayak rental",
+   "url": "https://www.wvia.org/news/local/2026-07-30/nepa-philharmonic-to-hold-sensory-friendly-and-lakeside-concerts-in-the-back-mountain-on-saturday-to-celebrate-america250",
+   "category": "music",
+   "note": "Brass quintet on a private dock, water access only; rain moves it free to Lemmond Theater",
+   "lat": null,
+   "lng": null
+  },
+  {
+   "name": "Destination West live at Grotto Harveys Lake",
+   "venue": "Grotto Pizza / Grand Slam Bar, Harveys Lake",
+   "address": "3445 Lakeside Dr, Harveys Lake, PA 18618",
+   "day": "sat",
+   "time": "7:00 PM",
+   "price": "Free",
+   "url": "https://allevents.in/org/grotto-pizza-harveys-lake/13200465",
+   "category": "music",
+   "note": "Band on the lakeside deck",
+   "lat": null,
+   "lng": null
+  },
+  {
+   "name": "Knoebels Amusement Resort (open day)",
+   "venue": "Knoebels Amusement Resort",
+   "address": "391 Knoebels Blvd, Elysburg, PA 17824",
+   "day": "sat",
+   "time": "12:00-9:00 PM",
+   "price": "Free admission, pay-per-ride",
+   "url": "https://knoebels.com/calendar/",
+   "category": "family",
+   "note": "America's largest free-admission park; ~45 min drive (SW edge of radius)",
+   "lat": null,
+   "lng": null
   }
  ],
  "sun": [
@@ -235,6 +300,32 @@
    "note": "Wavepool, slides, lazy river; daily summer schedule",
    "lat": 41.349566,
    "lng": -75.672042
+  },
+  {
+   "name": "RJ Scouton live at Grotto Harveys Lake",
+   "venue": "Grotto Pizza / Grand Slam Bar, Harveys Lake",
+   "address": "3445 Lakeside Dr, Harveys Lake, PA 18618",
+   "day": "sun",
+   "time": "1:00 PM",
+   "price": "Free",
+   "url": "https://allevents.in/org/grotto-pizza-harveys-lake/13200465",
+   "category": "music",
+   "note": "Sunday afternoon set on the lakeside deck",
+   "lat": null,
+   "lng": null
+  },
+  {
+   "name": "Doug Smith's Dixieland All-Stars (Nay Aug Concert Series)",
+   "venue": "Melody Garden stage, Nay Aug Park",
+   "address": "500 Arthur Ave, Scranton, PA 18510",
+   "day": "sun",
+   "time": "2:00-4:00 PM",
+   "price": "Free",
+   "url": "https://nayaugpark.org/concerts-directory/",
+   "category": "music",
+   "note": "Free Sunday concert series past the pool area",
+   "lat": null,
+   "lng": null
   }
  ]
 }

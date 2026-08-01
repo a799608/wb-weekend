@@ -90,6 +90,71 @@
    "note": "Every Saturday Jul-Oct; benefits Back Mountain Memorial Library",
    "lat": 41.3405369,
    "lng": -75.9505387
+  },
+  {
+   "name": "Rev'Em Up For Eli Car Show",
+   "venue": "Wyoming Valley West High School",
+   "address": "150 Wadham St, Plymouth, PA 18651",
+   "day": "sat",
+   "time": "4:00-8:00 PM",
+   "price": "Spectators free (benefit show)",
+   "url": "https://carcruisefinder.com/car-shows/category/pennsylvania/northeast-pennsylvania/",
+   "category": "other",
+   "note": "Benefit car show minutes from Kingston",
+   "lat": 41.2423013,
+   "lng": -75.9500103
+  },
+  {
+   "name": "Forest City Chevrolet 1st Annual Car Show",
+   "venue": "Forest City Chevrolet",
+   "address": "Forest City Chevrolet, Forest City, PA 18421",
+   "day": "sat",
+   "time": "4:00-7:30 PM",
+   "price": "Free",
+   "url": "https://carcruisefinder.com/car-shows/category/pennsylvania/northeast-pennsylvania/",
+   "category": "other",
+   "note": "North of Carbondale - NE edge of radius",
+   "lat": 41.6514722,
+   "lng": -75.4665719
+  },
+  {
+   "name": "Sydney Paolillo live on the patio",
+   "venue": "Breaker Brewing Company",
+   "address": "787 E Northampton St, Wilkes-Barre, PA 18702",
+   "day": "sat",
+   "time": "4:00-7:00 PM",
+   "price": "Free",
+   "url": "https://www.breakerbrewingcompany.com/events/",
+   "category": "music",
+   "note": "Craft brewery patio set, per Breaker's own events page",
+   "lat": 41.225326,
+   "lng": -75.8687791
+  },
+  {
+   "name": "Jon Chorba live",
+   "venue": "Breaker Brewing Outpost",
+   "address": "Breaker Brewing Outpost, Archbald, PA 18403",
+   "day": "sat",
+   "time": "6:00-9:00 PM",
+   "price": "Free",
+   "url": "https://www.breakerbrewingcompany.com/events/",
+   "category": "music",
+   "note": "Breaker's Archbald taproom",
+   "lat": 41.4948038,
+   "lng": -75.5368521
+  },
+  {
+   "name": "Montage Mountain Waterpark (open day)",
+   "venue": "Montage Mountain Waterpark",
+   "address": "1000 Montage Mountain Rd, Scranton, PA 18507",
+   "day": "sat",
+   "time": "11:00 AM-6:00 PM",
+   "price": "Day passes at montagemountainresorts.com",
+   "url": "https://www.montagemountainresorts.com/waterpark/",
+   "category": "family",
+   "note": "Wavepool, slides, lazy river; daily summer schedule",
+   "lat": 41.349566,
+   "lng": -75.672042
   }
  ],
  "sun": [
@@ -157,6 +222,19 @@
    "note": "Tarot readings w/ complimentary beer + crystal; taproom open to all",
    "lat": 41.3171756,
    "lng": -75.7952575
+  },
+  {
+   "name": "Montage Mountain Waterpark (open day)",
+   "venue": "Montage Mountain Waterpark",
+   "address": "1000 Montage Mountain Rd, Scranton, PA 18507",
+   "day": "sun",
+   "time": "11:00 AM-6:00 PM",
+   "price": "Day passes at montagemountainresorts.com",
+   "url": "https://www.montagemountainresorts.com/waterpark/",
+   "category": "family",
+   "note": "Wavepool, slides, lazy river; daily summer schedule",
+   "lat": 41.349566,
+   "lng": -75.672042
   }
  ]
 }

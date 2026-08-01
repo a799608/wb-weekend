@@ -1,0 +1,23 @@
+{
+  "weather": {
+    "source": "NWS api.weather.gov gridpoint BGM/72,20 (Kingston/Wilkes-Barre 18704)",
+    "sat": {
+      "date": "2026-08-01",
+      "hi": 86,
+      "lo": 68,
+      "precip_pct": 7,
+      "short": "Partly Sunny",
+      "detail": "Partly sunny, high near 86, south wind ~6 mph. Tonight mostly cloudy, low ~68, 10% precip."
+    },
+    "sun": {
+      "date": "2026-08-02",
+      "hi": 82,
+      "lo": 68,
+      "precip_pct": 40,
+      "short": "Patchy fog, then chance showers and thunderstorms",
+      "detail": "Patchy AM fog then chance of showers/thunderstorms, mostly cloudy, high near 82, gusts to 21 mph, 40% precip. Sunday night showers/storms likely, 80%, quarter-to-half inch."
+    },
+    "verdict": "Saturday is the outdoor day. Sunday = indoor/backup plans after morning."
+  },
+  "attractions": []
+}

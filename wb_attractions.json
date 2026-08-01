@@ -127,8 +127,8 @@
   {
    "name": "Mohegan Pennsylvania (casino + harness racing)",
    "address": "1280 Highway 315, Wilkes-Barre, PA 18702",
-   "lat": 41.24055,
-   "lng": -75.84853,
+   "lat": 41.26953,
+   "lng": -75.82209,
    "open_sat": "open daily (casino floor; racing eve)",
    "open_sun": "open daily",
    "price": "Free entry & parking",
@@ -231,8 +231,8 @@
   {
    "name": "Brace's Orchard (farm market + u-pick)",
    "address": "444 Brace Road, Dallas, PA 18612",
-   "lat": null,
-   "lng": null,
+   "lat": 41.37841,
+   "lng": -75.98242,
    "open_sat": "10:00-17:00",
    "open_sun": "10:00-17:00",
    "price": "Free entry; pay for fruit",

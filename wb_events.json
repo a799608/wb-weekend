@@ -166,8 +166,8 @@
    "url": "https://scrantonpa.gov/events/list/",
    "category": "festival",
    "note": "Culture, music, nonstop energy - NEPA's Latino Fiesta, per City of Scranton calendar",
-   "lat": null,
-   "lng": null
+   "lat": 41.40159,
+   "lng": -75.643809
   },
   {
    "name": "NEPA Philharmonic Sensory-Friendly Brass Concert",
@@ -179,8 +179,8 @@
    "url": "https://www.wvia.org/news/local/2026-07-30/nepa-philharmonic-to-hold-sensory-friendly-and-lakeside-concerts-in-the-back-mountain-on-saturday-to-celebrate-america250",
    "category": "family",
    "note": "America250 brass concert w/ fidgets, sensory headphones, haptic vests; walk-ins welcome",
-   "lat": null,
-   "lng": null
+   "lat": 41.348547,
+   "lng": -75.979186
   },
   {
    "name": "NEPA Philharmonic 'Lakeside Brass' on the water",
@@ -192,8 +192,8 @@
    "url": "https://www.wvia.org/news/local/2026-07-30/nepa-philharmonic-to-hold-sensory-friendly-and-lakeside-concerts-in-the-back-mountain-on-saturday-to-celebrate-america250",
    "category": "music",
    "note": "Brass quintet on a private dock, water access only; rain moves it free to Lemmond Theater",
-   "lat": null,
-   "lng": null
+   "lat": 41.3525797,
+   "lng": -76.0324241
   },
   {
    "name": "Destination West live at Grotto Harveys Lake",
@@ -205,8 +205,8 @@
    "url": "https://allevents.in/org/grotto-pizza-harveys-lake/13200465",
    "category": "music",
    "note": "Band on the lakeside deck",
-   "lat": null,
-   "lng": null
+   "lat": 41.351201,
+   "lng": -76.033548
   },
   {
    "name": "Knoebels Amusement Resort (open day)",
@@ -218,8 +218,8 @@
    "url": "https://knoebels.com/calendar/",
    "category": "family",
    "note": "America's largest free-admission park; ~45 min drive (SW edge of radius)",
-   "lat": null,
-   "lng": null
+   "lat": 40.8784806,
+   "lng": -76.4993433
   }
  ],
  "sun": [
@@ -311,8 +311,8 @@
    "url": "https://allevents.in/org/grotto-pizza-harveys-lake/13200465",
    "category": "music",
    "note": "Sunday afternoon set on the lakeside deck",
-   "lat": null,
-   "lng": null
+   "lat": 41.351201,
+   "lng": -76.033548
   },
   {
    "name": "Doug Smith's Dixieland All-Stars (Nay Aug Concert Series)",
@@ -324,8 +324,8 @@
    "url": "https://nayaugpark.org/concerts-directory/",
    "category": "music",
    "note": "Free Sunday concert series past the pool area",
-   "lat": null,
-   "lng": null
+   "lat": 41.40159,
+   "lng": -75.643809
   }
  ]
 }

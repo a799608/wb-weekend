@@ -1,12 +1,84 @@
 {
  "sat": [
-  {"name": "Adult Night ft. DJ Yemi (21+)", "venue": "Montage Mountain Waterpark", "address": "1000 Montage Mountain Rd, Scranton, PA 18507", "day": "sat", "time": "6:00-10:00 PM", "price": "See montagemountainresorts.com", "url": "https://www.montagemountainresorts.com/events/", "category": "music", "note": "DJ, live music, cocktails, lazy river/wavepool/slides open at night"},
-  {"name": "Drive-In Double Features (Spider-Man: Brand New Day + more)", "venue": "Circle Drive-In", "address": "1911 Scranton Carbondale Hwy, Dickson City, PA 18508", "day": "sat", "time": "Screens ~9:00/9:15 PM", "price": "$9.50 adult / $7.50 child", "url": "http://circledrive-in.com/", "category": "film", "note": "Screen 1: Spider-Man Brand New Day + The Breadwinner; Screen 2: Moana + Toy Story 5"},
-  {"name": "Hot Tub & Swim Spa Blowout Expo", "venue": "Mohegan Sun Arena at Casey Plaza", "address": "255 Highland Park Blvd, Wilkes-Barre Township, PA 18702", "day": "sat", "time": "Daytime (Jul 31-Aug 2)", "price": "Free admission", "url": "https://www.moheganarenapa.com/mohegansunarenapa_com/events", "category": "other", "note": "3-day expo at the arena concourse"},
-  {"name": "Beetlejuice JR (SCC Youth Theatre)", "venue": "Scranton Cultural Center", "address": "420 N Washington Ave, Scranton, PA 18503", "day": "sat", "time": "11:00 AM", "price": "Tickets via Ticketmaster/box office", "url": "https://scrantonculturalcenter.org/events", "category": "family", "note": "Youth theatre production, final performance Sat morning"}
+  {
+   "name": "Adult Night ft. DJ Yemi (21+)",
+   "venue": "Montage Mountain Waterpark",
+   "address": "1000 Montage Mountain Rd, Scranton, PA 18507",
+   "day": "sat",
+   "time": "6:00-10:00 PM",
+   "price": "See montagemountainresorts.com",
+   "url": "https://www.montagemountainresorts.com/events/",
+   "category": "music",
+   "note": "DJ, live music, cocktails, lazy river/wavepool/slides open at night",
+   "lat": 41.349566,
+   "lng": -75.672042
+  },
+  {
+   "name": "Drive-In Double Features (Spider-Man: Brand New Day + more)",
+   "venue": "Circle Drive-In",
+   "address": "1911 Scranton Carbondale Hwy, Dickson City, PA 18508",
+   "day": "sat",
+   "time": "Screens ~9:00/9:15 PM",
+   "price": "$9.50 adult / $7.50 child",
+   "url": "http://circledrive-in.com/",
+   "category": "film",
+   "note": "Screen 1: Spider-Man Brand New Day + The Breadwinner; Screen 2: Moana + Toy Story 5",
+   "lat": 41.4756169,
+   "lng": -75.6290118
+  },
+  {
+   "name": "Hot Tub & Swim Spa Blowout Expo",
+   "venue": "Mohegan Sun Arena at Casey Plaza",
+   "address": "255 Highland Park Blvd, Wilkes-Barre Township, PA 18702",
+   "day": "sat",
+   "time": "Daytime (Jul 31-Aug 2)",
+   "price": "Free admission",
+   "url": "https://www.moheganarenapa.com/mohegansunarenapa_com/events",
+   "category": "other",
+   "note": "3-day expo at the arena concourse",
+   "lat": 41.2377712,
+   "lng": -75.8545265
+  },
+  {
+   "name": "Beetlejuice JR (SCC Youth Theatre)",
+   "venue": "Scranton Cultural Center",
+   "address": "420 N Washington Ave, Scranton, PA 18503",
+   "day": "sat",
+   "time": "11:00 AM",
+   "price": "Tickets via Ticketmaster/box office",
+   "url": "https://scrantonculturalcenter.org/events",
+   "category": "family",
+   "note": "Youth theatre production, final performance Sat morning",
+   "lat": 41.4107403,
+   "lng": -75.6600197
+  }
  ],
  "sun": [
-  {"name": "Circle Drive-In Flea Fair", "venue": "Circle Drive-In", "address": "1911 Scranton Carbondale Hwy, Dickson City, PA 18508", "day": "sun", "time": "6:00 AM-2:00 PM", "price": "$1 per car", "url": "http://circledrive-in.com/", "category": "market", "note": "Largest flea + farmers market in NEPA, every Sunday"},
-  {"name": "Hot Tub & Swim Spa Blowout Expo", "venue": "Mohegan Sun Arena at Casey Plaza", "address": "255 Highland Park Blvd, Wilkes-Barre Township, PA 18702", "day": "sun", "time": "Daytime (final day)", "price": "Free admission", "url": "https://www.moheganarenapa.com/mohegansunarenapa_com/events", "category": "other", "note": "3-day expo, Sunday is last day"}
+  {
+   "name": "Circle Drive-In Flea Fair",
+   "venue": "Circle Drive-In",
+   "address": "1911 Scranton Carbondale Hwy, Dickson City, PA 18508",
+   "day": "sun",
+   "time": "6:00 AM-2:00 PM",
+   "price": "$1 per car",
+   "url": "http://circledrive-in.com/",
+   "category": "market",
+   "note": "Largest flea + farmers market in NEPA, every Sunday",
+   "lat": 41.4756169,
+   "lng": -75.6290118
+  },
+  {
+   "name": "Hot Tub & Swim Spa Blowout Expo",
+   "venue": "Mohegan Sun Arena at Casey Plaza",
+   "address": "255 Highland Park Blvd, Wilkes-Barre Township, PA 18702",
+   "day": "sun",
+   "time": "Daytime (final day)",
+   "price": "Free admission",
+   "url": "https://www.moheganarenapa.com/mohegansunarenapa_com/events",
+   "category": "other",
+   "note": "3-day expo, Sunday is last day",
+   "lat": 41.2377712,
+   "lng": -75.8545265
+  }
  ]
 }

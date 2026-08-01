@@ -1,0 +1,114 @@
+{
+  "trail": {
+    "continuous": false,
+    "route_notes": [
+      "Official name: Luzerne County Levee Trail (Wyoming Valley Levee Trail), ~12.8 mi of paved path in 4 separate reaches maintained by the Luzerne County Flood Protection Authority. It is NOT continuous Kirby Park -> Pittston.",
+      "Rideable route northbound (west/Kingston side of the river): (1) Kirby Park / Market St Bridge -> north on the Kingston reach to its Church St trailhead near the Cross Valley Expressway, ~1.7 mi paved levee-top. (2) GAP: Kingston reach to Forty Fort reach is still unconnected (Times Leader 7/21/2026: plan to close this gap is pending County Council approval; $1.1M in grants not yet transferred) - ride ~1 mi on borough streets through Forty Fort (Church St -> Wyoming Ave or River St neighborhood streets) to the Forty Fort reach at River St. (3) Forty Fort reach: 2.6 mi paved, past Wyoming Valley Airport runway, ends at the Wyoming Ave (US 11) trailhead lot near the Wyoming Monument in Wyoming borough - this is the NORTHERN END of the paved trail system. (4) ON-ROAD ~3.4 mi: US 11/Wyoming Ave (or the quieter parallel Susquehanna Ave one block riverside) north through Wyoming and Exeter into West Pittston, then Luzerne Ave to the Water Street (Firefighters Memorial) Bridge. (5) Cross the bridge into downtown Pittston; Main St is one block from the bridge.",
+      "The levee/trail does NOT extend into West Pittston - West Pittston has no levee (it is not among the 12 LCFPA-protected communities), so the last ~3.4 mi to Pittston is street riding no matter what.",
+      "Trail passes UNDER most road bridges (underpasses), so the levee-top segments themselves are crossing-free; the gaps are the only street riding south of Wyoming.",
+      "Levee top is totally exposed - zero shade, zero cover. Bail-out ramps to streets exist every few blocks, relevant if storms build early.",
+      "Sabatini's Pizza (Exeter) sits directly ON the on-road segment at 1925 Wyoming Ave - it is a mid-route option, not a detour. Same for Pizza Bella at 934 Wyoming Ave, West Pittston."
+    ],
+    "miles_one_way": "~8.5-9 mi Kirby Park -> downtown Pittston Main St (approx: 1.7 trail + 1.0 gap streets + 2.6 trail + 3.4 road + 0.2 bridge). ~5.5-6 of it is paved levee trail.",
+    "surface": "Asphalt/paved on all levee reaches (some cracking/rough patches reported by riders); on-road segments are normal borough streets, US 11 has traffic - Susquehanna Ave parallel is the calmer cycling choice through Wyoming/Exeter/West Pittston.",
+    "crossings": [
+      "Market St Bridge (Kirby Park <-> downtown Wilkes-Barre) - wide sidewalks, not needed for this route",
+      "Water Street / Firefighters Memorial Bridge (West Pittston Luzerne Ave <-> Pittston Water St) - the crossing to use for Main St lunch",
+      "Fort Jenkins Bridge (PA 92, West Pittston <-> north end of Pittston Main St) - alternate crossing"
+    ],
+    "closures": [
+      "ACTIVE but NOT on this route: Wilkes-Barre east-side levee path closed Riverside Dr (Locust St) to Gordon Ave, Barney Farms area, for a $650k erosion-repair project - ~8 weeks starting late July 2026 (Times Leader / Sunday Dispatch 7/27/2026). South of downtown WB, east bank; the west-side northbound route is unaffected.",
+      "Kingston<->Forty Fort trail gap remains OPEN/unbuilt as of 7/21/2026 - expect ~1 mi of street riding there.",
+      "No closures posted on lcfpa.org for the Kingston, Forty Fort, or Wyoming reaches as of 8/1/2026."
+    ],
+    "kirby_parking": "Kirby Park, Kingston side of the Market St Bridge (Wilkes-Barre mailing address) - large free public lots inside the park, entrance off Market St at the bridge; trail access directly from the park (listed access point on bikeitorhikeit.org and TrailLink)."
+  },
+  "lunch": [
+    {
+      "name": "Bravo Tex-Mex Restaurant & Bar",
+      "address": "61 S Main St, Pittston, PA 18640",
+      "lat": 41.3251,
+      "lng": -75.7891,
+      "sunday_hours": "11:30 AM - 9:00 PM",
+      "type": "Tex-Mex, sit-down + bar",
+      "price_level": "$$",
+      "note": "Downtown Main St, 2 blocks from the Water St Bridge. Opens 11:30 - fits the window exactly. Best true 'downtown Pittston lunch' bet.",
+      "url": "https://www.bravotexmexrestaurant.com/"
+    },
+    {
+      "name": "Pizza Bella - West Pittston",
+      "address": "934 Wyoming Ave, West Pittston, PA 18643",
+      "lat": 41.3200,
+      "lng": -75.7980,
+      "sunday_hours": "11:00 AM - 9:00 PM",
+      "type": "Pizza/Italian counter, casual",
+      "price_level": "$",
+      "note": "ON the ride route (Wyoming Ave, West Pittston) ~0.5 mi before the bridge - the storm-hedge option: eating here instead of crossing to Pittston shaves ~1 mi round trip.",
+      "url": "https://pittston.pbnepa.com/pittston-pizza-bella/"
+    },
+    {
+      "name": "Sabatini's Pizza",
+      "address": "1925 Wyoming Ave, Exeter, PA 18643",
+      "lat": 41.3080,
+      "lng": -75.8190,
+      "sunday_hours": "opens 11:00 AM (close listed 10 or 11 PM depending on source)",
+      "type": "Legendary NEPA pizza joint (since 1958), casual",
+      "price_level": "$",
+      "note": "It's in EXETER, not Pittston - but it sits directly ON the on-road leg of this ride (US 11), ~2 mi before Pittston. Zero detour. Cash situation/wait can be a thing on weekends.",
+      "url": "https://sabatinispizza.gotoeat.net/"
+    },
+    {
+      "name": "The Tipsy Turtle Market Street Pub",
+      "address": "29 Market St, Jenkins Twp (Pittston), PA 18640",
+      "lat": 41.3170,
+      "lng": -75.7810,
+      "sunday_hours": "11:00 AM - 12:00 AM",
+      "type": "Sports pub, big wing/sandwich menu",
+      "price_level": "$$",
+      "note": "~1 mi past downtown Pittston (cross town via Main St -> Market St). Full pub lunch, opens 11. Adds ~2 mi round trip.",
+      "url": "https://tipsyturtlepub.com/"
+    },
+    {
+      "name": "Susquehanna Brewing Co. taproom",
+      "address": "635 S Main St, Pittston, PA 18640",
+      "lat": 41.3186,
+      "lng": -75.7906,
+      "sunday_hours": "12:00 - 8:00 PM",
+      "type": "Brewery taproom; food = food trucks (not guaranteed every Sunday)",
+      "price_level": "$",
+      "note": "~0.7 mi south of downtown on S Main. Great beer stop, but food is truck-dependent - treat as a beer stop, not the lunch plan, unless a truck is confirmed that day.",
+      "url": "https://www.sbcbeer.com/"
+    }
+  ],
+  "lunch_closed_sunday_flags": [
+    "Napoli's Pizza, 26 S Main St Pittston - CLOSED Sundays",
+    "Agolino's, 22 Luzerne Ave West Pittston (right at the bridge) - CLOSED Sundays",
+    "Rikasa, 53 S Main St - CLOSED Sundays (official site)",
+    "Tomato Bar & Bistro - CLOSED Sundays (and 4 PM open anyway)",
+    "The Red Mill, S Main St - listed Wed-Sat 5 PM-close; no verifiable Sunday lunch",
+    "Cafe Toscana is in WILKES-BARRE (1 Public Square), not Pittston - Sun 1-8 PM if wanted near the ride start",
+    "Fire and Ice is 'on Toby Creek' in TRUCKSVILLE, not Pittston - and Sunday hours start 4 PM",
+    "Vince's Pizza Express (Pittston) - conflicting Sunday listings (closed vs 12-9); not verified, left off the list"
+  ],
+  "timing": {
+    "depart": "9:45-10:15 AM from Kirby Park (fog should be lifting; gives margin)",
+    "lunch_window": "11:15 AM - 12:30 PM in Pittston (Pizza Bella/Sabatini's/Tipsy Turtle open 11:00, Bravo 11:30)",
+    "back_by": "Rolling south by 12:30-12:45 PM; back at Kirby Park ~1:45-2:00 PM",
+    "reasoning": "~9 mi each way at a casual 10-11 mph rolling pace with the two street segments and the bridge = 55-70 min per leg. The 40% shower/t-storm risk is a classic afternoon-convection setup - the danger window typically opens ~2 PM - and the levee top is completely exposed (no shade, no shelter), so the whole plan is 'be done by 2.' Departing ~10 puts arrival in Pittston ~11:10, a relaxed 60-75 min lunch, and a return leg finishing ~1:45 before storms organize. Gusts to 21 mph are manageable but will be in your face one direction on the open levee - budget the slower leg accordingly. Turnaround discipline: (1) hard rule - on the bike southbound by 12:45 no matter what; (2) if skies look convective already at the Wyoming Ave trailhead (~10:45), skip the Pittston crossing and lunch at Pizza Bella (West Pittston) or Sabatini's (Exeter) to cut 1-4 mi; (3) if caught out, drop off the levee at any street ramp - solid shelter (gas stations, storefronts) lines Wyoming Ave the whole way; the levee itself is the worst place to be in lightning."
+  },
+  "sources": [
+    "https://lcfpa.org/",
+    "https://trails.dcnr.pa.gov/trails/trail/trailview?trailkey=528",
+    "https://bikeitorhikeit.org/susquehanna_river_levee_trails.htm",
+    "https://www.traillink.com/trail/luzerne-county-levee-trail/",
+    "https://www.timesleader.com/news/1749698/plan-still-pending-for-trail-to-close-levee-gap-between-kingston-and-forty-fort",
+    "https://www.psdispatch.com/news/104356/part-of-wilkes-barre-levee-path-temporarily-closed-for-work-to-stop-erosion",
+    "https://www.bravotexmexrestaurant.com/",
+    "https://pittston.pbnepa.com/pittston-pizza-bella/",
+    "https://www.rikasarestaurant.com/contact/",
+    "https://napolispizzapittston.com/",
+    "https://tipsyturtlepub.com/",
+    "https://www.sbcbeer.com/"
+  ],
+  "caveats": "Lat/lng values are approximate (street-level, not geocoded). Restaurant hours verified via current aggregator/official listings 8/1/2026; a 30-second phone check Sunday morning is still smart for the one you pick (Bravo 570-299-2912, Pizza Bella 570-602-4446, Sabatini's 570-693-2270)."
+}

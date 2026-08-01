@@ -191,6 +191,29 @@
   addMobilePanel(document.getElementById('list').closest('.panel'), '📅 What’s on');
   addMobilePanel(document.getElementById('count').closest('.panel'), '🎛 Filters');
 
+  // ---- Sunday levee-ride layer (Kirby Park -> Pittston lunch run) ----
+  var PAVED1 = [[41.2436, -75.8975], [41.2705, -75.8836]];                    // Kirby -> Church St (levee, paved)
+  var GAP1   = [[41.2705, -75.8836], [41.2789, -75.8735]];                    // Forty Fort street gap ~1 mi
+  var PAVED2 = [[41.2789, -75.8735], [41.3095, -75.8395]];                    // Forty Fort reach -> Wyoming Ave trailhead
+  var ONROAD = [[41.3095, -75.8395], [41.3215, -75.8065], [41.3271, -75.7935], [41.3245, -75.7897]]; // streets -> Water St bridge -> Main St
+  L.polyline(PAVED1, { color: '#1e8a3c', weight: 5, opacity: .85 }).addTo(map).bindTooltip('Levee trail (paved)');
+  L.polyline(PAVED2, { color: '#1e8a3c', weight: 5, opacity: .85 }).addTo(map).bindTooltip('Levee trail (paved) — ends at Wyoming Ave');
+  L.polyline(GAP1, { color: '#c77700', weight: 4, dashArray: '6 8' }).addTo(map).bindTooltip('GAP — ~1 mi on Forty Fort streets');
+  L.polyline(ONROAD, { color: '#c77700', weight: 4, dashArray: '6 8' }).addTo(map).bindTooltip('On-road ~3.4 mi (US 11 / Susquehanna Ave) to Water St Bridge');
+  L.marker([41.3271, -75.7935], { icon: L.divIcon({ className: '', html: '<div style="font-size:18px">🚴</div>', iconSize: [18,18], iconAnchor: [9,9] }) })
+    .addTo(map).bindTooltip('Water St Bridge -> Pittston Main St');
+
+  fetch('wb_levee_ride.json?t=' + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
+    (d.lunch || []).forEach(function (x) {
+      if (x.lat == null) return;
+      L.marker([x.lat, x.lng], { icon: L.divIcon({ className: '', html: '<div style="font-size:19px;filter:drop-shadow(0 1px 1px #0008)">🍴</div>', iconSize: [19,19], iconAnchor: [9,9] }) })
+        .addTo(map)
+        .bindPopup('<b>' + esc(x.name) + '</b><br>Sun: <b>' + esc(x.sunday_hours || '?') + '</b> &middot; ' + esc(x.type || '') + '<br>' +
+          '<span class="muted">' + esc(x.address || '') + '</span><br>' + esc(x.note || '') +
+          (x.url ? '<br><a class="htl-book" href="' + esc(x.url) + '" target="_blank" rel="noopener">Site</a>' : ''), { maxWidth: 280 });
+    });
+  }).catch(function () {});
+
   function load() {
     Promise.all([
       fetch('wb_events.json?t=' + Date.now()).then(function (r) { return r.json(); }).catch(function () { return { sat: [], sun: [] }; }),

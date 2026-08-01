@@ -51,6 +51,45 @@
    "note": "Youth theatre production, final performance Sat morning",
    "lat": 41.4107403,
    "lng": -75.6600197
+  },
+  {
+   "name": "St. Al's Bazaar (final night)",
+   "venue": "St. Aloysius Church",
+   "address": "143 W Division St, Wilkes-Barre, PA 18706",
+   "day": "sat",
+   "time": "5:00-11:00 PM",
+   "price": "Free admission",
+   "url": "https://www.timesleader.com/features/1750393/bazaars-and-festivals-4",
+   "category": "festival",
+   "note": "Live music by Strawberry Jam; sausage & peppers, potato pancakes, halushki, bingo, flea market",
+   "lat": 41.2331329,
+   "lng": -75.9141137
+  },
+  {
+   "name": "Summerfest at Our Lady of Victory",
+   "venue": "Our Lady of Victory Church",
+   "address": "327 Cherry Lane Rd, Tannersville, PA 18372",
+   "day": "sat",
+   "time": "4:00-8:00 PM",
+   "price": "Free admission",
+   "url": "https://www.timesleader.com/features/1750393/bazaars-and-festivals-4",
+   "category": "festival",
+   "note": "Homemade food, used book sale, mystery packages, dinner (Poconos edge of radius)",
+   "lat": 41.0353945,
+   "lng": -75.2815855
+  },
+  {
+   "name": "Back Mountain Farmers Market",
+   "venue": "Dallas Senior High School",
+   "address": "Dallas Senior High School, Dallas, PA 18612",
+   "day": "sat",
+   "time": "9:00 AM-1:00 PM",
+   "price": "Free",
+   "url": "https://www.discovernepa.com/thing-to-do/back-mountain-farmers-market/",
+   "category": "market",
+   "note": "Every Saturday Jul-Oct; benefits Back Mountain Memorial Library",
+   "lat": 41.3405369,
+   "lng": -75.9505387
   }
  ],
  "sun": [
@@ -79,6 +118,45 @@
    "note": "3-day expo, Sunday is last day",
    "lat": 41.2377712,
    "lng": -75.8545265
+  },
+  {
+   "name": "Summerfest at Our Lady of Victory (final day)",
+   "venue": "Our Lady of Victory Church",
+   "address": "327 Cherry Lane Rd, Tannersville, PA 18372",
+   "day": "sun",
+   "time": "11:30 AM-3:00 PM",
+   "price": "Free admission",
+   "url": "https://www.timesleader.com/features/1750393/bazaars-and-festivals-4",
+   "category": "festival",
+   "note": "Homemade food, used book sale, mystery packages (Poconos edge of radius)",
+   "lat": 41.0353945,
+   "lng": -75.2815855
+  },
+  {
+   "name": "Gate of Heaven & Our Lady of Victory Combined Parish Picnic",
+   "venue": "Gate of Heaven Parish Center",
+   "address": "40 Machell Ave, Dallas, PA 18612",
+   "day": "sun",
+   "time": "12:00 PM",
+   "price": "Free (covered-dish)",
+   "url": "https://www.timesleader.com/features/1750393/bazaars-and-festivals-4",
+   "category": "festival",
+   "note": "Hot dogs, hamburgers, beverages provided; community covered-dish picnic",
+   "lat": 41.3346529,
+   "lng": -75.9682642
+  },
+  {
+   "name": "Tarot & Brews",
+   "venue": "Susquehanna Brewing Co.",
+   "address": "635 S Main St, Pittston, PA 18640",
+   "day": "sun",
+   "time": "1:00-6:00 PM",
+   "price": "$45/reading (RSVP), taproom free",
+   "url": "https://sbcbeer.com/events/",
+   "category": "other",
+   "note": "Tarot readings w/ complimentary beer + crystal; taproom open to all",
+   "lat": 41.3171756,
+   "lng": -75.7952575
   }
  ]
 }

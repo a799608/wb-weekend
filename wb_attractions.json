@@ -1,23 +1,167 @@
 {
-  "weather": {
-    "source": "NWS api.weather.gov gridpoint BGM/72,20 (Kingston/Wilkes-Barre 18704)",
-    "sat": {
-      "date": "2026-08-01",
-      "hi": 86,
-      "lo": 68,
-      "precip_pct": 7,
-      "short": "Partly Sunny",
-      "detail": "Partly sunny, high near 86, south wind ~6 mph. Tonight mostly cloudy, low ~68, 10% precip."
-    },
-    "sun": {
-      "date": "2026-08-02",
-      "hi": 82,
-      "lo": 68,
-      "precip_pct": 40,
-      "short": "Patchy fog, then chance showers and thunderstorms",
-      "detail": "Patchy AM fog then chance of showers/thunderstorms, mostly cloudy, high near 82, gusts to 21 mph, 40% precip. Sunday night showers/storms likely, 80%, quarter-to-half inch."
-    },
-    "verdict": "Saturday is the outdoor day. Sunday = indoor/backup plans after morning."
+ "weather": {
+  "source": "NWS api.weather.gov gridpoint BGM/72,20 (Kingston/Wilkes-Barre 18704)",
+  "sat": {
+   "date": "2026-08-01",
+   "hi": 86,
+   "lo": 68,
+   "precip_pct": 7,
+   "short": "Partly Sunny",
+   "detail": "Partly sunny, high near 86, south wind ~6 mph. Tonight mostly cloudy, low ~68, 10% precip."
   },
-  "attractions": []
+  "sun": {
+   "date": "2026-08-02",
+   "hi": 82,
+   "lo": 68,
+   "precip_pct": 40,
+   "short": "Patchy fog, then chance showers and thunderstorms",
+   "detail": "Patchy AM fog then chance of showers/thunderstorms, mostly cloudy, high near 82, gusts to 21 mph, 40% precip. Sunday night showers/storms likely, 80%, quarter-to-half inch."
+  },
+  "verdict": "Saturday is the outdoor day. Sunday = indoor/backup plans after morning."
+ },
+ "attractions": [
+  {
+   "name": "Ricketts Glen State Park (Falls Trail)",
+   "address": "695 State Route 487, Benton, PA 17814",
+   "lat": null,
+   "lng": null,
+   "open_sat": "sunrise-sunset",
+   "open_sun": "sunrise-sunset",
+   "price": "Free",
+   "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/ricketts-glen-state-park.html",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "22 named waterfalls; Falls Trail ~7.2-mi loop. No closures posted on park page. Do it SATURDAY - wet rock after Sunday storms is treacherous. ~45 min from Kingston."
+  },
+  {
+   "name": "Frances Slocum State Park",
+   "address": "565 Mount Olivet Road, Wyoming, PA 18644",
+   "lat": null,
+   "lng": null,
+   "open_sat": "sunrise-sunset (pool 11:00-19:00)",
+   "open_sun": "sunrise-sunset (pool 11:00-19:00)",
+   "price": "Park free; pool charges a fee",
+   "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/frances-slocum-state-park.html",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "Closest state park to 18704 (~15 min). Pool w/ 2 waterslides open daily 11-7 through Labor Day per DCNR swimming page; 165-acre lake, kayaking, trails."
+  },
+  {
+   "name": "Seven Tubs Recreation Area",
+   "address": "900 Bear Creek Blvd, Wilkes-Barre, PA 18702",
+   "lat": null,
+   "lng": null,
+   "open_sat": "dawn-dusk",
+   "open_sun": "dawn-dusk",
+   "price": "Free",
+   "url": "https://discovernepa.com/listing/seven-tubs-nature-area/",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "Glacial potholes + waterfalls on Wheelbarrow Run. Only 59 parking spots - lot fills by ~11am summer Saturdays; go early. Gate closes when lot is full."
+  },
+  {
+   "name": "Nescopeck State Park",
+   "address": "1137 Honey Hole Road, Drums, PA 18222",
+   "lat": null,
+   "lng": null,
+   "open_sat": "sunrise-sunset",
+   "open_sun": "sunrise-sunset",
+   "price": "Free",
+   "url": "https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/nescopeck-state-park.html",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "Quiet 3,550-acre park, flat wetland/forest trails, environmental education center. Good low-crowd alternative."
+  },
+  {
+   "name": "D&L Trail - Black Diamond section (White Haven trailhead)",
+   "address": "Main Street, White Haven, PA 18661",
+   "lat": null,
+   "lng": null,
+   "open_sat": "dawn-dusk",
+   "open_sun": "dawn-dusk",
+   "price": "Free",
+   "url": "https://delawareandlehigh.org/",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "Crushed-stone rail-trail along the Lehigh; ride south toward Lehigh Gorge. ~30 min from Kingston."
+  },
+  {
+   "name": "Back Mountain Trail",
+   "address": "Trailhead off Parry Street, Luzerne, PA 18709",
+   "lat": 41.30825,
+   "lng": -75.93382,
+   "open_sat": "dawn-dusk",
+   "open_sun": "dawn-dusk",
+   "price": "Free",
+   "url": "https://www.visitluzernecounty.com/344/Attractions",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "Rail-trail climbing from Luzerne toward Trucksville/Dallas; closest bike trail to 18704."
+  },
+  {
+   "name": "Wyoming Valley Levee Trail (Kirby Park access)",
+   "address": "Kirby Park, Market Street, Wilkes-Barre/Kingston, PA 18704",
+   "lat": 41.25001,
+   "lng": -75.89218,
+   "open_sat": "dawn-dusk",
+   "open_sun": "dawn-dusk",
+   "price": "Free",
+   "url": "https://www.wilkes-barre.city/",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "Paved/gravel riverside miles atop the Susquehanna flood levee, flat, right in Kingston - the zero-drive option."
+  },
+  {
+   "name": "Harveys Lake public access (PFBC boat launch)",
+   "address": "Lakeside Drive (Rt 415 NW corner), Harveys Lake, PA 18618",
+   "lat": null,
+   "lng": null,
+   "open_sat": "open daily",
+   "open_sun": "open daily",
+   "price": "Free launch",
+   "url": "https://www.fishandboat.com/",
+   "category": "outdoor",
+   "weather_dependent": true,
+   "note": "Only true public access on the lake - two paved ramps, parking, restrooms. Shoreline/swimming otherwise private (Sunset Beach Club is members/private)."
+  },
+  {
+   "name": "Mohegan Pennsylvania (casino + harness racing)",
+   "address": "1280 Highway 315, Wilkes-Barre, PA 18702",
+   "lat": null,
+   "lng": null,
+   "open_sat": "open daily (casino floor; racing eve)",
+   "open_sun": "open daily",
+   "price": "Free entry & parking",
+   "url": "https://moheganpa.com/",
+   "category": "other",
+   "weather_dependent": false,
+   "note": "Sat Aug 1: 'Stars, Stripes and Jeeps Saturdays' Jeep Wrangler giveaway, live harness racing, free line dancing at Embers Terrace. Sun: Play & Eat Sundays, champagne brunch at The Hive."
+  },
+  {
+   "name": "Steamtown National Historic Site",
+   "address": "350 Cliff Street, Scranton, PA 18503",
+   "lat": 41.40796,
+   "lng": -75.67155,
+   "open_sat": "09:30-17:00",
+   "open_sun": "09:30-17:00",
+   "price": "Museum FREE; Scranton Limited train ride $6 (ages 6+), $1 under 6",
+   "url": "https://www.nps.gov/stea/planyourvisit/trainrides.htm",
+   "category": "museum",
+   "weather_dependent": false,
+   "note": "Scranton Limited short train rides BOTH days: 10:30, 11:30, 1:15, 2:30. SPECIAL SAT AUG 1: NEPA Wine Train, 1pm from Carbondale (Iron Horse Society, $25-55). Roundhouse + working steam yard."
+  },
+  {
+   "name": "Electric City Trolley Museum",
+   "address": "300 Cliff Street, Scranton, PA 18503",
+   "lat": 41.40964,
+   "lng": -75.67343,
+   "open_sat": "09:00-16:30 (rides 10:30, 12:00, 13:30, 15:00)",
+   "open_sun": "09:00-16:30 (rides 10:30, 12:00, 13:30, 15:00)",
+   "price": "Museum admission + excursion fare (call 570-963-6590)",
+   "url": "https://www.lackawannacounty.org/government/departments/trolley_museum.php",
+   "category": "museum",
+   "weather_dependent": false,
+   "note": "Vintage trolley excursions run Thu-Sun; museum daily 9-4:30. Same campus as Steamtown - easy double-header."
+  }
+ ]
 }
